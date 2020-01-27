@@ -25,7 +25,7 @@ export class Landing extends React.Component {
 
     Alert.alert(`Welcome ${username}`, `The password entered is ${password}`);
 
-    
+    this.setState({username: '', password: ''});
   }
 
   render() {
