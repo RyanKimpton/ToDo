@@ -25,7 +25,7 @@ export class Home extends React.Component{
 
         return (
             <View style = {styles.container}>
-                <Header message = {user} />
+                <Header message = {user} navigator = {this.props.navigation}/>
 
                 <View style = {styles.middle}>
                     <FAB

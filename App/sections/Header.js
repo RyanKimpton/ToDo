@@ -1,31 +1,29 @@
 import React from '../../node_modules/react';
+import {Alert} from 'react-native'
 import {StyleSheet, Text, View, Image} from '../../node_modules/react-native';
-import { withNavigation } from 'react-navigation';
+import { navigation } from 'react-navigation';
+
 
 export class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {isLoggedIn : false};
+
+        console.log(this.props)
+        
+        this.state = {navi : this.props.navigator};
     }
 
     static navigationOptions = {
         headerShown: false
       };
 
-    logout() {
-        console.log("hello");
-        console.log(this.props);
-
-        this.props.navigation.navigate('LandingRoute');
-
-        Alert.alert(`Goodbye ${username}`);
-    }
 
     render() {
-        let name = this.state.isLoggedIn ? 'sample User' : this.props.message;
+        let name = this.props.message;
+
         return (
             <View style = {styles.headStyle}>
-                <Text onPress = {this.logout} style = {styles.logoutText}>
+                <Text onPress =  {() => this.state.navi.navigate('LandingRoute')} style = {styles.logoutText}>
                     Logout
                 </Text>
 
@@ -37,7 +35,7 @@ export class Header extends React.Component {
     }
 }
 
-export default withNavigation(Header);
+export default Header;
 
 const styles = StyleSheet.create({
     headText: {
