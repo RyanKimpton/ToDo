@@ -1,21 +1,26 @@
 import React from 'react';
-import {Home} from './app/views/Home.js';
-import {Contact} from './app/views/Contact.js'
-import {createStackNavigator, createAppContainer} from 'react-navigation-stack';
+import {Home} from './App/views/Home.js';
+import {Landing} from './App/views/Landing.js';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+
 
 const MyRoutes = createStackNavigator({
   HomeRoute: {
     screen: Home
   },
-  ListRoute: {
-    screen: List
+  // ListRoute: {
+  //   screen: List
+  // },
+  // SignInRoute: {
+  //   screen: SignIn
+  // },
+  LandingRoute: {
+    screen: Landing
   },
-  SignInRoute: {
-    screen: SignIn
-  }
 },
   {
-    initialRouteName: 'HomeRT'
+    initialRouteName: 'LandingRoute'
   }
 )
 
