@@ -36,7 +36,7 @@ export class Menu extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#35605a'
+        backgroundColor: '#008080'
     },
     buttonRow: {
         flex: 3,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1
     },
     buttonStyles: {
-        backgroundColor: '#35605a',
+        backgroundColor: '#008080',
         flex: 1,
         width: '50%',
         height: '50%',
